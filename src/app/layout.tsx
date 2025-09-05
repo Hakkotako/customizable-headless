@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider theme={theme}>
           <CssBaseline />
 
-          <Header title="My Custom Webpage" />
+          <Header navTitle="My Custom Webpage" logoSrc="/work.png" />
           <Container maxWidth="lg">{children}</Container>
         </ThemeProvider>
       </body>

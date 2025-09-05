@@ -6,10 +6,15 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import Image from "next/image";
 
 type NavItem = { label: string; path: string };
+type HeaderProps = {
+  navTitle?: string;
+  logoSrc?: string; // URL eller importeret billede
+};
 
-export default function Header({ title }: { title?: string }) {
+export default function Header({ navTitle, logoSrc }: HeaderProps) {
   const [navData, setNavData] = useState<NavItem[]>([]);
 
   useEffect(() => {
@@ -20,9 +25,18 @@ export default function Header({ title }: { title?: string }) {
 
   return (
     <AppBar position="static">
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between", padding: "20px" }}>
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between", padding: "25px" , maxHeight: 100, minHeight: 50, ml: 10, mr: 10}}>
+        {logoSrc && (
+          <Image
+            src={logoSrc}
+            alt="logo"
+            width={60}
+            height={60}
+            style={{ marginRight: "10px", objectFit: "contain"}}
+          />
+        )}
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          {title || "My Headless Site"}
+          {navTitle || "Welcome"}
         </Typography>
         <Box sx={{ display: "flex", gap: 2 }}>
           {navData.map((item, index) => (
