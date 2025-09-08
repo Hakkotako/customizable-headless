@@ -1,27 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+import navData from "@/data/navigation.json"; // importér direkte
 
-type NavItem = { label: string; path: string };
 type HeaderProps = {
   navTitle?: string;
   logoSrc?: string; // URL eller importeret billede
 };
 
 export default function Header({ navTitle, logoSrc }: HeaderProps) {
-  const [navData, setNavData] = useState<NavItem[]>([]);
-
-  useEffect(() => {
-    fetch("/api/navigation")
-      .then((res) => res.json())
-      .then((data) => setNavData(data));
-  }, []);
 
   return (
     <AppBar position="static">

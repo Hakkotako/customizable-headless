@@ -1,0 +1,8 @@
+
+{
+  "text": "© 2025 MyCompany. All rights reserved.",
+  "links": [
+    { "label": "Privacy Policy", "path": "/privacy" },
+    { "label": "Terms of Service", "path": "/terms" }
+  ]
+}

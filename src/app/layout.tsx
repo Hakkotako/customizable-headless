@@ -4,6 +4,7 @@ import { CssBaseline, Container } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -18,8 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider theme={theme}>
           <CssBaseline />
 
-          <Header navTitle="My Custom Webpage" logoSrc="/work.png" />
+          <Header navTitle="Denver Tattoo Shop" logoSrc="/eagelLogo.png" />
           <Container maxWidth="lg">{children}</Container>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
