@@ -3,6 +3,7 @@ import heroData from "@/data/hero.json";
 import Review from "@/components/Review";
 import SliderComp from "@/components/SliderComp";
 import testimonials from "../data/testimonials.json";
+import { bgBG } from "@mui/material/locale";
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
         ctaLink={heroData.ctaLink}
         backgroundImage={heroData.backgroundImage}
       />
-      <SliderComp testimonials={testimonials}/>
+      <SliderComp testimonials={testimonials} bgPic="Skull.png"/>
       <Review />
     </main>
   );

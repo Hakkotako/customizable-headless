@@ -1,5 +1,5 @@
 "use client";
-import { Card, Typography, Container } from "@mui/material";
+import { Card, Typography, Container, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -15,9 +15,10 @@ export type TestimonialsData = {
 type SliderCompProps = {
   testimonials: TestimonialsData[];
   title?: string;
+  bgPic?: string;
 };
 
-export default function SliderComp({ testimonials, title }: SliderCompProps) {
+export default function SliderComp({ testimonials, title, bgPic }: SliderCompProps) {
   return (
     <Container maxWidth="lg" sx={{ py: 8, position: "relative", overflow: "hidden" }}>
       <Typography
@@ -46,21 +47,39 @@ export default function SliderComp({ testimonials, title }: SliderCompProps) {
             <Card
               sx={{
                 p: 3,
-                backgroundColor: "#FFF8F0",
-                minHeight: 150,
+                backgroundColor: "#1f7540a1",
+                height: 185,
+                position: "relative",
+                overflow: "hidden"
               }}
             >
-              <Typography sx={{ fontSize: "14px", mb: 2, fontStyle: "italic", lineHeight: 1.5 }}>
+              <Typography sx={{ fontSize: "16px", mb: 2, fontStyle: "italic", lineHeight: 1.5 }}>
                 {t.quote}
               </Typography>
               <Typography sx={{ fontWeight: 600 }}>{t.name}</Typography>
               <Typography sx={{ fontSize: "12px", color: "#666" }}>
                 {t.title}
               </Typography>
+              
+               {bgPic && (
+                <Box
+                  sx={{
+                    position: "absolute",
+                    bottom: -50,
+                    right: -40,
+                    pointerEvents: "none",
+                    width: 200,
+                    height: "auto",
+                  }}
+                >
+                  <img src={bgPic} alt="Background" style={{ width: "100%" }} />
+                </Box>
+              )}
             </Card>
           </SwiperSlide>
         ))}
       </Swiper>
+
     </Container>
   );
 }
