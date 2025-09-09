@@ -11,12 +11,13 @@ import navData from "@/data/navigation.json"; // importér direkte
 type HeaderProps = {
   navTitle?: string;
   logoSrc?: string; // URL eller importeret billede
+  navBgColor?: string;
 };
 
-export default function Header({ navTitle, logoSrc }: HeaderProps) {
+export default function Header({ navTitle, logoSrc, navBgColor }: HeaderProps) {
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ backgroundColor: navBgColor || "rgba(14, 13, 13, 0.41)", backdropFilter: "blur(1px)" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", padding: "25px" , maxHeight: 100, minHeight: 50, ml: 10, mr: 10}}>
         {logoSrc && (
           <Image
@@ -27,7 +28,7 @@ export default function Header({ navTitle, logoSrc }: HeaderProps) {
             style={{ marginRight: "10px", objectFit: "contain"}}
           />
         )}
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', fontSize: '24px' }}>
           {navTitle || "Welcome"}
         </Typography>
         <Box sx={{ display: "flex", gap: 2 }}>

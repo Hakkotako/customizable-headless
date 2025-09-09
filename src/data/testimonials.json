@@ -1,0 +1,32 @@
+[
+  {
+    "quote": "I really like coffee and their office coffee is actually not bad. At least it's free",
+    "name": "David Lauridsen",
+    "title": "Simpel lazy intern"
+  },
+  {
+    "quote": "Trying is the first step towards failure.",
+    "name": "Homer Simpson",
+    "title": "Pro beer drinker"
+  },
+  {
+    "quote": "Sometimes I code, sometimes I nap. Mostly I nap.",
+    "name": "Cat Programmer",
+    "title": "Head of Productivity"
+  },
+  {
+    "quote": "I invented a new framework called 'ProcrastinateJS'. It's revolutionary.",
+    "name": "Lazy Dev",
+    "title": "Senior Innovation Specialist"
+  },
+  {
+    "quote": "I smoke wherever there's an ashtray.",
+    "name": "Margrethe II",
+    "title": "Queen of Denmark"
+  },
+  {
+    "quote": "I bring donuts to meetings so people like my code.",
+    "name": "Donut Lover",
+    "title": "Chief Happiness Officer"
+  }
+]

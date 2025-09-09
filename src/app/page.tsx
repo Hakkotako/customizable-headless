@@ -1,8 +1,24 @@
+import Hero from "@/components/Hero";
+import heroData from "@/data/hero.json";
+import Review from "@/components/Review";
+import SliderComp from "@/components/SliderComp";
+import testimonials from "../data/testimonials.json";
+
+
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to my headless site!</h1>
-      <p>This is running on Next.js + TypeScript + MUI.</p>
+      <Hero
+        title={heroData.title}
+        subtitle={heroData.subtitle}
+        ctaText={heroData.ctaText}
+        ctaLink={heroData.ctaLink}
+        backgroundImage={heroData.backgroundImage}
+      />
+      <SliderComp testimonials={testimonials}/>
+      <Review />
     </main>
   );
 }
+
+
