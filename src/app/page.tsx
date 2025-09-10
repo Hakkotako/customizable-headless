@@ -16,7 +16,7 @@ export default function Home() {
         ctaLink={heroData.ctaLink}
         backgroundImage={heroData.backgroundImage}
       />
-      <SliderComp testimonials={testimonials} bgPic="Skull.png"/>
+      <SliderComp testimonials={testimonials} bgPic="/Skull.png"/>
       <Review />
     </main>
   );

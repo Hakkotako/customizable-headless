@@ -2,7 +2,7 @@
 import { Card, Typography, Container, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -31,7 +31,7 @@ export default function SliderComp({ testimonials, title, bgPic }: SliderCompPro
 
       <Swiper
         modules={[Pagination, Autoplay]}
-        spaceBetween={20}
+        spaceBetween={30}
         slidesPerView={1}
         breakpoints={{
           600: { slidesPerView: 2 },
@@ -46,32 +46,40 @@ export default function SliderComp({ testimonials, title, bgPic }: SliderCompPro
           <SwiperSlide key={i}>
             <Card
               sx={{
-                p: 3,
+                p: 2,
                 backgroundColor: "#1f7540a1",
                 height: 185,
                 position: "relative",
-                overflow: "hidden"
+                overflow: "hidden",
               }}
             >
-              <Typography sx={{ fontSize: "16px", mb: 2, fontStyle: "italic", lineHeight: 1.5 }}>
+              <Typography sx={{ fontSize: "18px", mb: 2, fontStyle: "italic", lineHeight: 1.5 }}>
                 {t.quote}
               </Typography>
               <Typography sx={{ fontWeight: 600 }}>{t.name}</Typography>
               <Typography sx={{ fontSize: "12px", color: "#666" }}>
                 {t.title}
               </Typography>
-              
-               {bgPic && (
+
+              {bgPic && (
                 <Box
                   sx={{
                     position: "absolute",
-                    bottom: -50,
+                    bottom: -60,
                     right: -40,
                     pointerEvents: "none",
                     width: 200,
                     height: "auto",
                   }}
                 >
+                  {/* <Image
+                    src={bgPic}
+                    alt="Background"
+                    width={200}
+                    height={200}
+                    style={{ width: "100%", height: "auto" }}
+                  >
+                  </Image> */}
                   <img src={bgPic} alt="Background" style={{ width: "100%" }} />
                 </Box>
               )}
