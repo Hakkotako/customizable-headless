@@ -2,6 +2,7 @@
 import { Card, Typography, Container, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import Image from 'next/image';
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -38,7 +39,7 @@ export default function SliderComp({ testimonials, title, cardPic, bgPic }: Slid
             backgroundImage: `url(${bgPic})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.051, // gør billedet meget svagt
+            opacity: 0.051,
             zIndex: 0,
           }}
         />
@@ -97,10 +98,16 @@ export default function SliderComp({ testimonials, title, cardPic, bgPic }: Slid
                       height: "auto",
                     }}
                   >
-                  
-                    <img src={cardPic} alt="Background" style={{ width: "100%" }} />
+                    <Image
+                      src={cardPic}
+                      alt="Background"
+                      width={200}
+                      height={120} 
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </Box>
                 )}
+
               </Card>
             </SwiperSlide>
           ))}

@@ -26,7 +26,21 @@ export default function Hero(props: HeroProps) {
                 textAlign: "center",
             }}
         >
-            <Container maxWidth="md">
+            {/* Dark overlay */}
+            {props.backgroundImage && (
+                <Box
+                    sx={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: "rgba(0, 0, 0, 0.5)", // Juster 0.5 for mere/mindre mørk
+                        zIndex: 0,
+                    }}
+                />
+            )}
+            <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
                 <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#fff', textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
                     {props.title}
                 </Typography>
