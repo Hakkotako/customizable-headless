@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Box, TextField, Button, Typography, Container } from "@mui/material";
+import {
+  Box,
+  TextField,
+  Button,
+  Typography,
+  Container,
+  Grid,
+} from "@mui/material";
 
 type ContactField = {
   name: string;
@@ -12,7 +19,7 @@ type ContactField = {
 
 type ContactFormProps = {
   title?: string;
-  fields?: ContactField[];           
+  fields?: ContactField[];
   submitText?: string;
   onSubmit?: (data: Record<string, string>) => void;
 };
@@ -23,10 +30,11 @@ export default function ContactForm({
   submitText = "Send Message",
   onSubmit,
 }: ContactFormProps) {
-  // Standard if no fields are provided
   const defaultFields: ContactField[] = [
     { name: "name", label: "Name", required: true },
     { name: "email", label: "Email", type: "email", required: true },
+    { name: "phone", label: "Phone", type: "tel", required: false },
+    { name: "company", label: "Company", required: false },
     { name: "message", label: "Message", type: "textarea", required: true },
   ];
 
@@ -35,7 +43,9 @@ export default function ContactForm({
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -61,20 +71,29 @@ export default function ContactForm({
           </Typography>
         ) : (
           <form onSubmit={handleSubmit}>
-            {formFields.map((field) => (
-              <TextField
-                key={field.name}
-                name={field.name}
-                label={field.label}
-                type={field.type || "text"}
-                required={field.required ?? true}
-                fullWidth
-                sx={{ mb: 3 }}
-                onChange={handleChange}
-              />
-            ))}
+            <Grid container spacing={2}>
+              {formFields.map((field, index) => (
+                <Grid
+                  item
+                  xs={12}
+                  sm={field.name === "message" ? 12 : 6}
+                  key={field.name}
+                >
+                  <TextField
+                    name={field.name}
+                    label={field.label}
+                    type={field.type === "textarea" ? "text" : field.type || "text"}
+                    required={field.required ?? true}
+                    fullWidth
+                    multiline={field.type === "textarea"}
+                    rows={field.type === "textarea" ? 4 : undefined}
+                    onChange={handleChange}
+                  />
+                </Grid>
+              ))}
+            </Grid>
 
-            <Box sx={{ textAlign: "center" }}>
+            <Box sx={{ textAlign: "center", mt: 3 }}>
               <Button type="submit" variant="contained" color="primary">
                 {submitText}
               </Button>

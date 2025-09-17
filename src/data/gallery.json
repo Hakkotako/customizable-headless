@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "Tribal Art Tattoo",
+    "description": "Made by Jane Doe",
+    "imageUrl": "/galleryTat1.webp",
+    "alt": "Tribal Art Tattoo",
+    "link": "https://google.com/"
+  },
+  {
+    "id": "2",
+    "title": "Small Tattoos Design",
+    "description": "Made by John Smith",
+    "imageUrl": "/galleryTat2.webp",
+    "alt": "Small Tattoos Design",
+    "link": "https://google.com/"
+  }
+]

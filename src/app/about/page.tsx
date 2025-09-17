@@ -1,8 +1,14 @@
+import PageTemplate from "@/components/PageTemplate";
+import Text from "@/components/Text";
+
 export default function About() {
   return (
-    <main>
-      <h1>About Us</h1>
-      <p>This is the About page for our headless site.</p>
-    </main>
+    <PageTemplate
+      heroTitle="Learn More About Us"
+      heroSubtitle="We are dedicated to providing the best service."
+      components={[
+        <Text key={"about-text"} />
+      ]}
+    />
   );
 }

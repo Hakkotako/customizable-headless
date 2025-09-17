@@ -74,11 +74,13 @@ export default function PageTemplate({
             )}
 
             {/* Other components */}
-            {components.map((Component, i) => (
-                <Box key={i} sx={{ mb: 6 }}>
-                    {Component}
-                </Box>
-            ))}
+            <Container maxWidth="lg" sx={{ py: 8 }}>
+                {components.map((Component, i) => (
+                    <Box key={i} sx={{ mb: 6 }}>
+                        {Component}
+                    </Box>
+                ))}
+            </Container>
         </Box>
     );
 }
