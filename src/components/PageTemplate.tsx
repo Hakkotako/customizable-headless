@@ -3,14 +3,14 @@
 import { Box, Container, Typography, Button } from "@mui/material";
 
 type PageTemplateProps = {
-    pageTitle?: string;              // Side-titel (valgfri)
-    heroTitle?: string;              // Titel i Hero
-    heroSubtitle?: string;           // Subtitle i Hero
-    heroCtaText?: string;            // CTA-knap tekst
-    heroCtaLink?: string;            // CTA-knap link
-    heroBgColor?: string;            // Baggrundsfarve hvis ingen billede
-    heroBgImg?: string;              // Baggrundsbillede
-    components?: React.ReactNode[];  // Andre komponenter på siden
+    pageTitle?: string;              // Page-titel (valgfri)
+    heroTitle?: string;              // Titel for Hero
+    heroSubtitle?: string;           // Subtitle for Hero
+    heroCtaText?: string;            // CTA-Button text
+    heroCtaLink?: string;            // CTA-Button link
+    heroBgColor?: string;            // Background color for Hero
+    heroBgImg?: string;              // Background image for Hero
+    components?: React.ReactNode[];  // Other components on the page
 };
 
 export default function PageTemplate({

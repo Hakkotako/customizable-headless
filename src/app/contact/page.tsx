@@ -1,5 +1,6 @@
 import PageTemplate from "@/components/PageTemplate";
 import ContactForm from "@/components/ContactForm";
+import Text from "@/components/Text";
 
 export default function Contact() {
   return (
@@ -10,9 +11,11 @@ export default function Contact() {
       components={[
         <ContactForm
           key={"contact-form"}
-          title="CONTACT US NOW"
+          title="CONTACT US "
         />,
-        
+        <Text 
+          key={"contact-text"}
+        />
       ]}
     />
   );
