@@ -14,5 +14,37 @@
     "imageUrl": "/galleryTat2.webp",
     "alt": "Small Tattoos Design",
     "link": "https://google.com/"
-  }
+  },
+    {
+        "id": "3",
+        "title": "Floral Tattoo",
+        "description": "Made by Alice Johnson",
+        "imageUrl": "/galleryTat3.webp",
+        "alt": "Floral Tattoo",
+        "link": "https://google.com/"
+    },
+    {
+        "id": "4",
+        "title": "Geometric Tattoo",
+        "description": "Made by Bob Brown",
+        "imageUrl": "/galleryTat4.jpg",
+        "alt": "Geometric Tattoo",
+        "link": "https://google.com/"
+    },
+    {
+        "id": "5",
+        "title": "Watercolor Tattoo",
+        "description": "Made by Carol White",
+        "imageUrl": "/galleryTat5.jpg",
+        "alt": "Watercolor Tattoo",
+        "link": "https://google.com/"
+    },
+    {
+        "id": "6",
+        "title": "Blackwork Tattoo",
+        "description": "Made by David Green",
+        "imageUrl": "/galleryTat6.jpg",
+        "alt": "Blackwork Tattoo",
+        "link": "https://google.com/"
+    }
 ]

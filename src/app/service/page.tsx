@@ -10,8 +10,8 @@ export default function Service() {
       heroTitle="Our Services"
       heroSubtitle="Here you can learn more about what we offer."
       components={[
-        <ServiceGrid key={"services-grid"} services={serviceData} />,
-        <GalleryComponent key={"services-gallery"} items={gallerydata} columns={2} />
+        <ServiceGrid key={"services-grid"} services={serviceData} title="Our Services" />,
+        <GalleryComponent key={"services-gallery"} items={gallerydata} columns={3} title="Our work of Art" />
       ]}
     />
   );
