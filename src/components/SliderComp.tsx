@@ -38,8 +38,7 @@ export default function SliderComp({ testimonials, title, cardPic, bgPic }: Slid
             backgroundImage: `url(${bgPic})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            // backgroundRepeat: "no-repeat",
-            opacity: 0.05, // gør billedet meget svagt
+            opacity: 0.051, // gør billedet meget svagt
             zIndex: 0,
           }}
         />
@@ -73,7 +72,7 @@ export default function SliderComp({ testimonials, title, cardPic, bgPic }: Slid
               <Card
                 sx={{
                   p: 2,
-                  backgroundColor: "#1f7540a1",
+                  backgroundColor: "#38493ea1",
                   height: 185,
                   position: "relative",
                   overflow: "hidden",
@@ -83,7 +82,7 @@ export default function SliderComp({ testimonials, title, cardPic, bgPic }: Slid
                   {t.quote}
                 </Typography>
                 <Typography sx={{ fontWeight: 600 }}>{t.name}</Typography>
-                <Typography sx={{ fontSize: "12px", color: "#666" }}>
+                <Typography sx={{ fontSize: "13px", color: "#533535ff" }}>
                   {t.title}
                 </Typography>
 
@@ -98,14 +97,7 @@ export default function SliderComp({ testimonials, title, cardPic, bgPic }: Slid
                       height: "auto",
                     }}
                   >
-                    {/* <Image
-                    src={cardPic}
-                    alt="Background"
-                    width={200}
-                    height={200}
-                    style={{ width: "100%", height: "auto" }}
-                  >
-                  </Image> */}
+                  
                     <img src={cardPic} alt="Background" style={{ width: "100%" }} />
                   </Box>
                 )}

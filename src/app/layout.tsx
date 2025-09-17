@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider theme={theme}>
           <CssBaseline />
           
-          <Header navTitle="Denver Tattoo Shop" logoSrc="/eagelLogo.png"  />
+          <Header navTitle="Denver Tattoo Studio" logoSrc="/eagelLogo.png"  />
 
           {children}
 

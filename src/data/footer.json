@@ -1,6 +1,6 @@
 {
   "address": {
-    "name": "Denver Tattoo Shop",
+    "name": "Denver Tattoo Studio",
     "street": "1234 W Colfax Ave",
     "city": "Denver",
     "state": "CO",
@@ -10,7 +10,7 @@
     "phone": "+1 (303) 555-0198",
     "email": "info@dts.com"
   },
-  "text": "© 2025 Denver Tattoo Shop. All rights reserved.",
+  "text": "© 2025 Denver Tattoo Studio. All rights reserved.",
   "links": [
     { "label": "Privacy Policy", "path": "/privacy" },
     { "label": "Terms of Service", "path": "/terms" }
