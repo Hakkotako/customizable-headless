@@ -10,12 +10,9 @@ export default function Contact() {
       components={[
         <ContactForm
           key={"contact-form"}
-          fields={[
-            { name: "name", label: "Name", required: true },
-            { name: "email", label: "Email", type: "email", required: true },
-            { name: "message", label: "Message", type: "textarea", required: true },
-          ]}
+          title="CONTACT US NOW"
         />,
+        
       ]}
     />
   );

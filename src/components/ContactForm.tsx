@@ -12,7 +12,7 @@ type ContactField = {
 
 type ContactFormProps = {
   title?: string;
-  fields: ContactField[];
+  fields?: ContactField[];           
   submitText?: string;
   onSubmit?: (data: Record<string, string>) => void;
 };
@@ -23,6 +23,15 @@ export default function ContactForm({
   submitText = "Send Message",
   onSubmit,
 }: ContactFormProps) {
+  // Standard if no fields are provided
+  const defaultFields: ContactField[] = [
+    { name: "name", label: "Name", required: true },
+    { name: "email", label: "Email", type: "email", required: true },
+    { name: "message", label: "Message", type: "textarea", required: true },
+  ];
+
+  const formFields = fields ?? defaultFields;
+
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -42,7 +51,7 @@ export default function ContactForm({
   return (
     <Box sx={{ backgroundColor: "#f8f9fa", py: 8 }}>
       <Container maxWidth="sm">
-        <Typography variant="h4" align="center" sx={{ mb: 4 }}>
+        <Typography variant="h4" align="center" sx={{ mb: 4, fontWeight: 300 }}>
           {title}
         </Typography>
 
@@ -52,7 +61,7 @@ export default function ContactForm({
           </Typography>
         ) : (
           <form onSubmit={handleSubmit}>
-            {fields.map((field) => (
+            {formFields.map((field) => (
               <TextField
                 key={field.name}
                 name={field.name}
