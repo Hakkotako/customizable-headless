@@ -7,7 +7,7 @@ export default function Contact() {
     <PageTemplate
       heroTitle="Get in Touch"
       heroSubtitle="We would love to hear from you!"
-      heroBgColor="linear-gradient(135deg, #274b63ff 0%, #814812ff 100%)"
+      heroBgImg="tempHeroBg.jpg"
       components={[
         <ContactForm
           key={"contact-form"}

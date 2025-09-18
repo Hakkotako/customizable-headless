@@ -29,7 +29,7 @@ export default function Text() {
                 For us, <Box component="a" href="/about" fontWeight="bold" color="#46709cff">tattoos</Box> are not just about the art; they&apos;re about the experience. We take pride in our commitment to customer satisfaction, ensuring that every client leaves our studio not only with a beautiful tattoo but also with a memorable experience. Our friendly and professional staff are here to guide you through every step of the process, from consultation to aftercare.
             </Typography>
             <Box gap={2} sx={{display: "flex", justifyContent: "center"}}>
-                <Button href="/about" style={{backgroundColor: "#46709cff", color: "#fff"}}>Gallery</Button>
+                <Button href="/service" style={{backgroundColor: "#46709cff", color: "#fff"}}>Gallery</Button>
                 <Button href="/contact" style={{backgroundColor: "#46709cff", color: "#fff"}}>Contact</Button>
                 <Button href="/contact" style={{backgroundColor: "#46709cff", color: "#fff"}}>Book Now</Button>
             </Box>

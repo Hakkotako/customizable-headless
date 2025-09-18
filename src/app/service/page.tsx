@@ -9,9 +9,10 @@ export default function Service() {
     <PageTemplate
       heroTitle="Our Services"
       heroSubtitle="Here you can learn more about what we offer."
+      heroBgImg="tempHeroBg.jpg"
       components={[
-        <ServiceGrid key={"services-grid"} services={serviceData} title="Our Services" />,
-        <GalleryComponent key={"services-gallery"} items={gallerydata} columns={3} title="Our work of Art" />
+        <GalleryComponent key={"services-gallery"} items={gallerydata} columns={3} title="Our work of Art" />,
+        <ServiceGrid key={"services-grid"} services={serviceData} title="Our Services" />
       ]}
     />
   );

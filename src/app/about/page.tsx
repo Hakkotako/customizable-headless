@@ -6,6 +6,7 @@ export default function About() {
     <PageTemplate
       heroTitle="Learn More About Us"
       heroSubtitle="We are dedicated to providing the best service."
+      heroBgImg="tempHeroBg.jpg"
       components={[
         <Text key={"about-text"} />
       ]}
